@@ -1,0 +1,17 @@
+{
+    "users": [
+    {
+        "id": 1,
+        "email": "admin@evently.com",
+        "password": "admin123",
+        "role": "administrator"
+    },
+    {
+        "id": 2,
+        "email": "visitor@evently.com",
+        "password": "visitor123",
+        "role": "visitor"
+    }
+    ],
+    "events": []
+}
