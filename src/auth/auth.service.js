@@ -1,9 +1,15 @@
-export async function loginUser(email, password, role) {
-    const res = await fetch(`http://localhost:3000/users?email=${email}&password=${password}&role=${role}`);
-
+export async function loginUser(name, email, password, role) {
+    // Obtener todos los usuarios
+    const res = await fetch(`http://localhost:3000/users`);
     const users = await res.json();
 
-    // Si existe un usuario con esas credenciales, lo devolvemos
-    return users.length > 0 ? users[0] : null;
-    
+    // Validar manualmente en el cliente
+    const user = users.find(u => 
+        u.name.toLowerCase() === name.toLowerCase() &&
+        u.email.toLowerCase() === email.toLowerCase() &&
+        u.password === password &&
+        u.role === role
+    );
+
+    return user || null;
 }

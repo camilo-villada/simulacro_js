@@ -2,15 +2,17 @@
     "users": [
     {
         "id": 1,
+        "name": "Admin User",
         "email": "admin@evently.com",
         "password": "admin123",
-        "role": "administrator"
+        "role": "admin"
     },
     {
         "id": 2,
+        "name": "Juan Camilo",
         "email": "visitor@evently.com",
         "password": "visitor123",
-        "role": "visitor"
+        "role": "user"
     }
     ],
     "events": []

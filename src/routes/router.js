@@ -1,6 +1,7 @@
 import Login from '../pages/login.js';
 import Dashboard from "../pages/dashboard.js";
 import { initLoginController } from "../auth/login.controller.js";
+import { initDashboardController } from "../auth/dashboard.controller.js";
 
 
 const routes = {
@@ -19,6 +20,10 @@ export function router(){
   // Inicializar controlador si estamos en login
   if(path === "/" || path === "/login"){
     initLoginController()
+  }
+
+  if(path === "/dashboard"){
+    initDashboardController();
   }
 }
 

@@ -1,5 +1,6 @@
 import "./styles/style.css";
 import "./styles/login.css";
+import "./styles/dashboard.css";
 import { router } from "./routes/router.js";
 
 

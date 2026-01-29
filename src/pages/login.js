@@ -13,7 +13,7 @@ import cutleryIcon from '../assets/cutlery.svg';
  */
 export default function Login() {
         return /*html*/ `
-        <main class="container" aria-labelledby="login-title">
+        <div class="container" aria-labelledby="login-title">
 
             <section class="card">
 
@@ -26,6 +26,19 @@ export default function Login() {
 
                 <form id="login-form" class="login_form">
 
+                    <div class="field">
+                        <label for="name">Full Name</label>
+                        <div class="input-group">
+                            <input
+                                type="text"
+                                id="name"
+                                name="name"
+                                placeholder="e.g. Jhn Doe"
+                                required
+                            />
+                        </div>
+                    </div>
+                    
                     <div class="field">
                         <label for="email">Email Address</label>
                         <div class="input-group">
@@ -55,8 +68,8 @@ export default function Login() {
                         <label for="role">Select Role</label>
                         <div class="input-group">
                             <select id="role" name="role">
-                                <option value="visitor">User</option>
-                                <option value="administrator">Admin</option>
+                                <option value="user">User</option>
+                                <option value="admin">Admin</option>
                             </select>
                         </div>
                     </div>
@@ -74,6 +87,6 @@ export default function Login() {
                 RestorApp Academic Simulation
             </small>
 
-        </main>
+        </div>
         `;
 }
