@@ -323,7 +323,7 @@ body {
 }
 
 /* New design overrides for card-based login layout */
-.container {
+.login-container {
     min-height: 100vh;
     display: flex;
     flex-direction: column;

@@ -25,7 +25,7 @@ export function initLoginController(){
                 if(user.role === "admin"){
                     window.history.pushState({}, "", "/dashboard");
                 }else{
-                    window.history.pushState({}, "", "/user")
+                    window.history.pushState({}, "", "/menu");
                 }
                 
                 router();

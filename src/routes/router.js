@@ -1,13 +1,16 @@
 import Login from '../pages/login.js';
 import Dashboard from "../pages/dashboard.js";
+import menu from '../pages/menu.js';
 import { initLoginController } from "../auth/login.controller.js";
 import { initDashboardController } from "../auth/dashboard.controller.js";
+import { initMenuController } from "../auth/menu.controller.js";
 
 
 const routes = {
   "/": Login,
   "/login": Login,
-  "/dashboard": Dashboard
+  "/dashboard": Dashboard,
+  "/menu": menu
 };
 
 export function router(){
@@ -24,6 +27,10 @@ export function router(){
 
   if(path === "/dashboard"){
     initDashboardController();
+  }
+
+  if(path === "/menu"){
+    initMenuController();
   }
 }
 

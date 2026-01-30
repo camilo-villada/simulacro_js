@@ -27,16 +27,16 @@ export function initDashboardController(){
     loadDashboardData();
 }
 
-async function loadDashboardData(params) {
+async function loadDashboardData() {
     try{
         //cargar eventos desde la API
-        const res = await fetch("http://localhost:300/events");
+        const res = await fetch("http://localhost:3000/events");
         const events = await res.json();
         console.log("Eventos cargados: ", events);
 
         //actualizar estadisticas del dashboard
         updateStats(events);
-    }catch{
+    }catch(error){
         console.error("Error al cargar datos: ", error)
     }
 }
