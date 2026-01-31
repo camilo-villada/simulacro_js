@@ -2,6 +2,7 @@ import "./styles/style.css";
 import "./styles/login.css";
 import "./styles/dashboard.css";
 import "./styles/menu.css";
+import "./styles/my-orders.css";
 import { router } from "./routes/router.js";
 
 
@@ -22,3 +23,8 @@ document.addEventListener('DOMContentLoaded', () =>{
 
     router()
 })
+
+// Escuchar eventos de navegación (botones atrás/adelante del navegador)
+window.addEventListener('popstate', () => {
+    router();
+});

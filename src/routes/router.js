@@ -1,16 +1,19 @@
 import Login from '../pages/login.js';
 import Dashboard from "../pages/dashboard.js";
-import menu from '../pages/menu.js';
+import Menu from '../pages/menu.js';
+import MyOrders from '../pages/my-orders.js';
 import { initLoginController } from "../auth/login.controller.js";
 import { initDashboardController } from "../auth/dashboard.controller.js";
 import { initMenuController } from "../auth/menu.controller.js";
+import { initMyOrdersController } from "../auth/myOrders.controller.js";
 
 
 const routes = {
   "/": Login,
   "/login": Login,
   "/dashboard": Dashboard,
-  "/menu": menu
+  "/menu": Menu,
+  "/my-orders": MyOrders
 };
 
 export function router(){
@@ -31,6 +34,10 @@ export function router(){
 
   if(path === "/menu"){
     initMenuController();
+  }
+
+  if(path === "/my-orders"){
+    initMyOrdersController();
   }
 }
 

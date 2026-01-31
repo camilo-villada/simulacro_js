@@ -1,6 +1,6 @@
 import burgerImg from "../assets/burger.jpeg"
 
-export default function menu(){
+export default function Menu(){
     return /* html*/`
     <header class="header">
         <div class="container">

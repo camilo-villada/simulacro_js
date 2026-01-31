@@ -1,4 +1,4 @@
-export default function dashboard(){
+export default function Dashboard(){
     return /*html*/ `
 
     <header class="header">
@@ -12,10 +12,13 @@ export default function dashboard(){
                 <h1 class="brand-title">RestorApp Admin</h1>
             </div>
             <nav class="nav">
-                <a href="#" class="nav-link active">Dashboard</a>
-                <a href="#" class="nav-link">Menu</a>
-                <a href="#" class="nav-link">Users</a>
-                <button id="logout-btn" class="nav-link" style="border:none;background:none;cursor:pointer;">Logout</button>
+                <span class="nav-link active">Dashboard</span>
+                <button id="logout-btn" class="logout-btn">
+                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M13 14l4-4m0 0l-4-4m4 4H7m6 4v1a2 2 0 01-2 2H5a2 2 0 01-2-2V5a2 2 0 012-2h6a2 2 0 012 2v1" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                    Log Out
+                </button>
             </nav>
             <div class="user-avatar">
                 <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40' viewBox='0 0 40 40'%3E%3Ccircle cx='20' cy='20' r='20' fill='%23E5E7EB'/%3E%3Cpath d='M20 20c2.76 0 5-2.24 5-5s-2.24-5-5-5-5 2.24-5 5 2.24 5 5 5zm0 2.5c-3.34 0-10 1.67-10 5v2.5h20v-2.5c0-3.33-6.66-5-10-5z' fill='%239CA3AF'/%3E%3C/svg%3E" alt="User Avatar">
@@ -162,17 +165,22 @@ export default function dashboard(){
                 <div class="update-section">
                     <h4 class="update-title">UPDATE STATUS</h4>
                     <select class="status-select" disabled>
-                        <option value="">Seleccionar estado</option>
-                        <option value="pending">Pending</option>
-                        <option value="preparing">Preparing</option>
-                        <option value="ready">Ready</option>
-                        <option value="delivered">Delivered</option>
+                        <option value="pendiente">Pendiente</option>
+                        <option value="preparando">Preparando</option>
+                        <option value="listo">Listo</option>
+                        <option value="entregado">Entregado</option>
                     </select>
                     <button class="btn-update" disabled>
                         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/>
                         </svg>
                         Update
+                    </button>
+                    <button class="btn-delete" disabled>
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M6 19c0 1.1.9 2 2 2h8c1.1 0 2-.9 2-2V7H6v12zM19 4h-3.5l-1-1h-5l-1 1H5v2h14V4z" fill="currentColor"/>
+                        </svg>
+                        Delete Order
                     </button>
                 </div>
             </aside>
